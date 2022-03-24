@@ -5,16 +5,25 @@ import { ReactComponent as Movies } from "../assets/icon-nav-movies.svg";
 import { ReactComponent as Tv } from "../assets/icon-nav-tv-series.svg";
 import { ReactComponent as Bookmark } from "../assets/icon-nav-bookmark.svg";
 import img from "../assets/image-avatar.png";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
     <div className="bg-backblue flex justify-between p-7 lg:flex-col lg:h-screen lg:w-20 lg:m-5 lg:bg-backblue lg:rounded-lg">
       <Logo />
       <div className="flex space-x-6 lg:flex-col lg:p-0 lg:space-x-0 lg:space-y-5">
-        <Home className="" />
-        <Movies className="" />
-        <Tv className="" />
-        <Bookmark className="" />
+        <Link to="/home">
+          <Home />
+        </Link>
+        <Link to="/movies">
+          <Movies />
+        </Link>
+        <Link to="/tv">
+          <Tv />
+        </Link>
+        <Link to="/bookmarks">
+          <Bookmark />
+        </Link>
       </div>
       <img
         src={img}
