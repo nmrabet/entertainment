@@ -10,14 +10,19 @@ function Trending() {
       <div className="flex flex-wrap pl-5">
         {isTrendingArr.map((item) => {
           return (
-            <div key={item.title}>
-              <Bookmark />
-              <p>
+            <div key={item.title} className="relative">
+              <img
+                src={item.thumbnail.regular.small}
+                alt=""
+                className="rounded-xl mr-4 mb-4"
+              />
+              <Bookmark className="absolute top-5 right-10" />
+              <p className="absolute bottom-7 left-4">
                 <span>{item.year} &bull; </span>
                 <span>{item.category} &bull; </span>
                 <span>{item.rating}</span>
+                <p>{item.title}</p>
               </p>
-              <p>{item.title}</p>
             </div>
           );
         })}
