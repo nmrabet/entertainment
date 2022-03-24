@@ -6,12 +6,16 @@ import Recommended from "../components/Recommended";
 
 function Home() {
   return (
-    <>
-      <Navbar />
-      <SearchBar placeholder="Search for movies or TV series" />
-      <Trending />
-      <Recommended />
-    </>
+    <div className="flex">
+      <div>
+        <Navbar />
+      </div>
+      <div>
+        <SearchBar placeholder="Search for movies or TV series" />
+        <Trending />
+        <Recommended />
+      </div>
+    </div>
   );
 }
 
