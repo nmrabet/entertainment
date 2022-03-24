@@ -7,6 +7,7 @@ module.exports = {
       specialred: "#FC4747",
       midnight: "#10141E",
       metal: "#5A698F",
+      white: "#fff"
     },
   },
   plugins: [],
