@@ -1,6 +1,7 @@
 import React from "react";
 import data from "../data.json";
 import { ReactComponent as Bookmark } from "../assets/icon-bookmark-empty.svg";
+import { ReactComponent as MovieIcon } from "../assets/icon-category-movie.svg";
 
 function Trending() {
   const isTrendingArr = data.filter((item) => item.isTrending);
@@ -17,12 +18,12 @@ function Trending() {
                 className="rounded-xl mr-4 mb-4"
               />
               <Bookmark className="absolute top-5 right-10" />
-              <p className="absolute bottom-7 left-4">
+              <div className="absolute bottom-7 left-4">
                 <span>{item.year} &bull; </span>
-                <span>{item.category} &bull; </span>
+                <span><MovieIcon className="inline-block mb-1"/> {item.category} &bull; </span>
                 <span>{item.rating}</span>
                 <p>{item.title}</p>
-              </p>
+              </div>
             </div>
           );
         })}
