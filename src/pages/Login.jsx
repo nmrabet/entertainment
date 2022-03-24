@@ -15,14 +15,14 @@ function Login() {
             placeholder="Email address"
             name=""
             id=""
-            className="pl-4 pb-4 mt-4 bg-backblue border-b-metal border-b-2"
+            className="focus:outline-none pl-4 pb-4 mt-4 bg-backblue border-b-metal border-b-2"
           />
           <input
             type="password"
             placeholder="Password"
             name=""
             id=""
-            className="pl-4 pb-4 mt-4 bg-backblue border-b-metal border-b-2"
+            className="focus:outline-none pl-4 pb-4 mt-4 bg-backblue border-b-metal border-b-2"
           />
         </div>
         <Button text="Login to your account" />

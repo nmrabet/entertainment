@@ -9,7 +9,7 @@ function SearchBar({ placeholder }) {
         type="search"
         name=""
         id=""
-        className="border-0 bg-midnight w-full p-6"
+        className="focus:outline-none border-0 bg-midnight w-full p-6"
         placeholder={placeholder}
       />
     </div>
