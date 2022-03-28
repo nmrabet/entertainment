@@ -6,7 +6,7 @@ import Recommended from "../components/Recommended";
 
 function Home() {
   return (
-    <div className="flex">
+    <div className="lg:flex">
       <div>
         <Navbar />
       </div>

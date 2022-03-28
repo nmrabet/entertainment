@@ -5,7 +5,7 @@ import Cinema from "../components/Cinema";
 
 function Movies() {
   return (
-    <div className="flex">
+    <div className="lg:flex">
       <div>
         <Navbar />
       </div>

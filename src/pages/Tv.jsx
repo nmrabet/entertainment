@@ -5,7 +5,7 @@ import Series from "../components/Series";
 
 function Tv() {
   return (
-    <div className="flex">
+    <div className="lg:flex">
       <div>
         <Navbar />
       </div>
