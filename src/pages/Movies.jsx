@@ -6,14 +6,12 @@ import data from "../data.json";
 
 function Movies() {
   const [searchMovie, setSearchMovie] = useState("");
-  
+
   const movies = data.filter((item) => item.category === "Movie");
 
   const filteredMovies = movies.filter((movie) => {
     return movie.title.toLocaleLowerCase().includes(searchMovie);
   });
-
-  console.log(filteredMovies);
 
   return (
     <div className="lg:flex">
@@ -27,14 +25,27 @@ function Movies() {
         />
         {searchMovie ? (
           <div>
-            <h2 className="text-2xl pl-5">
+            <h2 className="text-2xl pb-5 pl-5">
               Found {filteredMovies.length} results for ‘{searchMovie}’
             </h2>
+            {filteredMovies.map((movie) => {
+              return (
+                <div key={movie.title}>
+                  <Cinema movie={movie} />
+                </div>
+              );
+            })}
           </div>
         ) : (
           <div>
             <h2 className="p-5 text-2xl">Movies</h2>
-            <Cinema />
+            {movies.map((movie) => {
+              return (
+                <div key={movie.title}>
+                  <Cinema movie={movie} />
+                </div>
+              );
+            })}
           </div>
         )}
       </div>
