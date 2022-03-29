@@ -38,14 +38,8 @@ function Home() {
           </div>
         ) : (
           <div>
-            {data.map((movie) => {
-              return (
-                <div key={movie.title}>
-                  <Trending movie={movie} />
-                  <Recommended movie={movie} />
-                </div>
-              );
-            })}
+            <Trending />
+            <Recommended />
           </div>
         )}
       </div>
