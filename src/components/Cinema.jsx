@@ -6,8 +6,7 @@ import { ReactComponent as MovieIcon } from "../assets/icon-category-movie.svg";
 function Cinema() {
   const movies = data.filter((item) => item.category === "Movie");
   return (
-    <div>
-      <h2 className="p-5 text-2xl">Movies</h2>
+    <>
       <div className="flex flex-wrap pl-5">
         {movies.map((item) => {
           return (
@@ -31,7 +30,7 @@ function Cinema() {
           );
         })}
       </div>
-    </div>
+    </>
   );
 }
 
