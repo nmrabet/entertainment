@@ -28,24 +28,28 @@ function Tv() {
             <h2 className="text-2xl pb-5 pl-5">
               Found {filteredSeries.length} results for ‘{series}’
             </h2>
-            {filteredSeries.map((serie) => {
-              return (
-                <div key={serie.title}>
-                  <Series serie={serie} />
-                </div>
-              );
-            })}
+            <div className="flex flex-wrap">
+              {filteredSeries.map((serie) => {
+                return (
+                  <div key={serie.title}>
+                    <Series serie={serie} />
+                  </div>
+                );
+              })}
+            </div>
           </div>
         ) : (
           <div>
-             <h2 className="p-5 text-2xl">TV Series</h2>
-            {tvShows.map((serie) => {
-              return (
-                <div key={serie.title}>
-                  <Series serie={serie} />
-                </div>
-              );
-            })}
+            <h2 className="p-5 text-2xl">TV Series</h2>
+            <div className="flex flex-wrap">
+              {tvShows.map((serie) => {
+                return (
+                  <div key={serie.title}>
+                    <Series serie={serie} />
+                  </div>
+                );
+              })}
+            </div>
           </div>
         )}
       </div>

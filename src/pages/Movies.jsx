@@ -28,24 +28,28 @@ function Movies() {
             <h2 className="text-2xl pb-5 pl-5">
               Found {filteredMovies.length} results for ‘{searchMovie}’
             </h2>
-            {filteredMovies.map((movie) => {
-              return (
-                <div key={movie.title}>
-                  <Cinema movie={movie} />
-                </div>
-              );
-            })}
+            <div className="flex flex-wrap">
+              {filteredMovies.map((movie) => {
+                return (
+                  <div key={movie.title}>
+                    <Cinema movie={movie} />
+                  </div>
+                );
+              })}
+            </div>
           </div>
         ) : (
           <div>
             <h2 className="p-5 text-2xl">Movies</h2>
-            {movies.map((movie) => {
-              return (
-                <div key={movie.title}>
-                  <Cinema movie={movie} />
-                </div>
-              );
-            })}
+            <div className="flex flex-wrap">
+              {movies.map((movie) => {
+                return (
+                  <div key={movie.title}>
+                    <Cinema movie={movie} />
+                  </div>
+                );
+              })}
+            </div>
           </div>
         )}
       </div>

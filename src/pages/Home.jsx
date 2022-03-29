@@ -28,13 +28,15 @@ function Home() {
             <h2 className="text-2xl pb-5 pl-5">
               Found {research.length} results for ‘{search}’
             </h2>
-            {research.map((movie) => {
-              return (
-                <div key={movie.title}>
-                  <Cinema movie={movie} />
-                </div>
-              );
-            })}
+            <div className="flex flex-wrap">
+              {research.map((movie) => {
+                return (
+                  <div key={movie.title}>
+                    <Cinema movie={movie} />
+                  </div>
+                );
+              })}
+            </div>
           </div>
         ) : (
           <div>

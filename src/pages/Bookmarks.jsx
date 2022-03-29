@@ -4,10 +4,14 @@ import SearchBar from "../components/SearchBar";
 
 function Bookmarks() {
   return (
-    <>
-      <Navbar />
-      <SearchBar placeholder="Search for bookmarked shows" />
-    </>
+    <div className="lg:flex">
+      <div>
+        <Navbar />
+      </div>
+      <div>
+        <SearchBar placeholder="Search for bookmarked shows" />
+      </div>
+    </div>
   );
 }
 
