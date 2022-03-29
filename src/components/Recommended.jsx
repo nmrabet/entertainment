@@ -5,6 +5,7 @@ import { ReactComponent as MovieIcon } from "../assets/icon-category-movie.svg";
 
 function Recommended() {
   const recommendedArr = data.filter((item) => !item.isTrending);
+  
   return (
     <div>
       <h2 className="p-5 text-2xl">Recommended for you</h2>
