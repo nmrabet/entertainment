@@ -8,7 +8,7 @@ function Cinema({ movie }) {
       <div className="flex flex-wrap pl-5">
         <div key={movie.title} className="relative">
           <img
-            src={movie.thumbnail.regular.small}
+            src={movie.thumbnail.regular.medium}
             alt=""
             className="rounded-xl mr-4 mb-2"
           />

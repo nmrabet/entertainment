@@ -13,7 +13,7 @@ function Trending() {
           return (
             <div key={item.title} className="relative">
               <img
-                src={item.thumbnail.regular.small}
+                src={item.thumbnail.regular.medium}
                 alt=""
                 className="rounded-xl mr-4 mb-4"
               />

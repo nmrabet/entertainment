@@ -8,7 +8,7 @@ function Series({ serie }) {
       <div className="flex flex-wrap pl-5">
         <div key={serie.title} className="relative">
           <img
-            src={serie.thumbnail.regular.small}
+            src={serie.thumbnail.regular.medium}
             alt=""
             className="rounded-xl mr-4 mb-2"
           />
